@@ -11,11 +11,11 @@ class Quiz extends Component{
     }
 
     render(){
-        const isQuizend = true
+        const isQuizEnd = false
         return(
             <div>
-            <QuizEnd />
-            <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]}/>
+                {isQuizEnd ? <QuizEnd /> : 
+                <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]}/>}
         </div>
         )
     }
